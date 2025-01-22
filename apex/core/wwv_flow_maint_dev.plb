@@ -1,0 +1,34 @@
+set define off verify off
+prompt ...wwv_flow_maint_dev
+create or replace package body wwv_flow_maint_dev wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+b
+2dd 207
+6hpYHpGqi9A/f+Dz5sNhJOlZRPgwgwIJr9xqfHRDaGR8sLL0qC/hN54HoH9MohOi3uYp+sXY
+WrfUdVC025q3n15Jl6l2zzBhmgNPjJPPctNGWgjTPB6U7UcZPNKjLsEM7HfVcEKlcutglYWQ
+NY91Uengo16Je3dgWv3jeuN882WmtRgGN7kJXC/GhWxJFmLs7nAJcvwBLj3gNa4D0CMIuZVb
+gDhQYdIVYB25X5effpCriHflO9bgXz8atMoDhaH6OZg3OIeLaO98rE7ZbYwuPqa3dnUDGKCC
+vQk+7m85Q3Da5rC3C4pfS0O96o4KVrbfdFDEubp6ihNqoqMJ1M+ebLd/rL/oOIAG80MLF77F
+XZ8cz1/MumuRtKcRavFfzWnTCbTuxNQLBJCQh0wSsZ9I/hUoTpOJ33aT3JeTzX7OsfDlKYrH
+Tpb8Qiqq4pgdzQ/5eFz2VF9BuXmHLN+OVdzXr5FydAVnYm313kWBRbuMLIyv2pDfQz0cFdaW
+0RdTGA==
+
+/
+show errors
+set define '^'
