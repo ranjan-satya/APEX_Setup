@@ -1,6 +1,26 @@
 # Oracle APEX and ORDS Installation Guide 🚀
 ## Overview
 This guide provides a comprehensive, step-by-step process for setting up Oracle APEX and ORDS using Docker containers, creating a robust development environment for Oracle APEX applications.
+
+>> ### NOTE:
+>> The above files and directories in this repo are just for reference to check how your file structure should look like before you start running the containers
+>>   
+>> APEX_Setup/  
+>> ├── apex/  
+>> │   └── ...  
+>> ├── META-INF/  
+>> │   └── ...  
+>> ├── oracle/   
+>> ├── ords_config/   
+>> │   └── databases     
+>> │   |   └── default  
+>> │   |       ├── pool.xml  
+>> │   |       └── wallet  
+>> │   |           └── cwallet.sso  
+>> │   └── global     
+>> │       └── settings.xml  
+
+
 ## Prerequisites
 - Docker installed
 - Oracle Container Registry account
