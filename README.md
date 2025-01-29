@@ -51,7 +51,7 @@ This guide provides a comprehensive, step-by-step process for setting up Oracle 
 `-e TZ=Asia/Kolkata \`  
 `-e ORACLE_SID=ORCLCDB \`  
 `--network oracle_network \`  
-`-v $(pwd)/oracle:/ORCL \`  
+`-v $(pwd)/oracle:/opt/oracle/oradata \`  
 `-v $(pwd)/apex:/tmp/apex \`  
 `container-registry.oracle.com/database/enterprise:21.3.0.0`  
 ### 8. Configure APEX in Database Container
