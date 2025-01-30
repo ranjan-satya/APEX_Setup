@@ -34,8 +34,8 @@ This guide provides a comprehensive, step-by-step process for setting up Oracle 
 `mkdir oracle oracle`  
 `mkdir oracle ords_config`
 ### 4. Set Permissions for apex and ords_config directories
-`chmod -R 755 apex`  
-`chmod -R 755 ords_config`
+`chmod -R 775 apex`  
+`chmod -R 775 ords_config`
 ### 5. Login to Oracle Container Registry (Assumption: Oracle Container Registry account is created and auth token is created)
 `docker login container-registry.oracle.com`
   
@@ -68,12 +68,12 @@ This guide provides a comprehensive, step-by-step process for setting up Oracle 
 #### 8.4 Interact with the database using sqlplus  
 `sqlplus / as sysdba`  
 #### 8.5 SQL Commands for APEX Configuration (in the SQL Environment)
-`create pluggable database orclpdb241 admin user pdb_adm identified by Oradoc_db1`  
-`file_name_convert=('/opt/oracle/oradata/ORCLCDB/pdbseed/','/opt/oracle/oradata/ORCLCDB/ORCLPDB241');`  
+`create pluggable database orclpdb242 admin user pdb_adm identified by Oradoc_db1`  
+`file_name_convert=('/opt/oracle/oradata/ORCLCDB/pdbseed/','/opt/oracle/oradata/ORCLCDB/ORCLPDB242');`  
   
-`alter pluggable database orclpdb241 open read write;`  
+`alter pluggable database orclpdb242 open read write;`  
 `alter pluggable database all save state;`  
-`alter session set container = ORCLPDB241;`  
+`alter session set container = ORCLPDB242;`  
   
 `@apexins.sql SYSAUX SYSAUX TEMP /i/`  
 `@apxchpwd.sql`  
@@ -99,7 +99,7 @@ This guide provides a comprehensive, step-by-step process for setting up Oracle 
 > - 1  (basic connection)
 > - oracle  (hostname)
 > - 1521  (port number)
-> - ORCLPDB241  (service name)
+> - ORCLPDB242  (service name)
 > - sys (database username with admin privileges)
 > - oracle  (password for sys user)
 > - A  (accept the configurations) 
