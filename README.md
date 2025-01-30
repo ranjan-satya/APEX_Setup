@@ -44,6 +44,10 @@ This guide provides a comprehensive, step-by-step process for setting up Oracle 
   
 ### 6.  Create a docker network with the name oracle_network
 `docker network create oracle_network`
+
+### 7.  Create a docker volume with the name oracle
+`docker volume create oracle`
+
 ### 7. Run Oracle Database Container
 `docker run -it \`  
 `--name oracle \`  
@@ -51,7 +55,7 @@ This guide provides a comprehensive, step-by-step process for setting up Oracle 
 `-e TZ=Asia/Kolkata \`  
 `-e ORACLE_SID=ORCLCDB \`  
 `--network oracle_network \`  
-`-v $(pwd)/oracle:/opt/oracle/oradata \`  
+`-v oracle:/opt/oracle/oradata \`  
 `-v $(pwd)/apex:/tmp/apex \`  
 `container-registry.oracle.com/database/enterprise:21.3.0.0`  
 ### 8. Configure APEX in Database Container
