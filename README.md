@@ -48,8 +48,8 @@ This guide provides a comprehensive, step-by-step process for setting up Oracle 
 ### 7.  Create a docker volume with the name oracle
 `docker volume create oracle`
 
-### 7. Run Oracle Database Container
-`docker run -it \`  
+### 8. Run Oracle Database Container
+`docker run -d \`  
 `--name oracle \`  
 `-p 32122:1521 \`  
 `-e TZ=Asia/Kolkata \`  
@@ -58,16 +58,16 @@ This guide provides a comprehensive, step-by-step process for setting up Oracle 
 `-v oracle:/opt/oracle/oradata \`  
 `-v $(pwd)/apex:/tmp/apex \`  
 `container-registry.oracle.com/database/enterprise:21.3.0.0`  
-### 8. Configure APEX in Database Container
-#### 8.1 Access Container using bash
+### 9. Configure APEX in Database Container
+#### 9.1 Access Container using bash
 `docker exec -it oracle bash`  
-#### 8.2 Change the current directory to where apex directory is mounted (/tmp/apex)  
+#### 9.2 Change the current directory to where apex directory is mounted (/tmp/apex)  
 `cd /tmp/apex`  
-#### 8.3 Change the password of the database for the sys user to "oracle" (you can use the password of your choice, but remember to be consistent with it throughout the process)
+#### 9.3 Change the password of the database for the sys user to "oracle" (you can use the password of your choice, but remember to be consistent with it throughout the process)
 `/opt/oracle/setPassword.sh oracle`  
-#### 8.4 Interact with the database using sqlplus  
+#### 9.4 Interact with the database using sqlplus  
 `sqlplus / as sysdba`  
-#### 8.5 SQL Commands for APEX Configuration (in the SQL Environment)
+#### 9.5 SQL Commands for APEX Configuration (in the SQL Environment)
 `create pluggable database orclpdb242 admin user pdb_adm identified by Oradoc_db1`  
 `file_name_convert=('/opt/oracle/oradata/ORCLCDB/pdbseed/','/opt/oracle/oradata/ORCLCDB/ORCLPDB242');`  
   
@@ -86,7 +86,7 @@ This guide provides a comprehensive, step-by-step process for setting up Oracle 
 > - oracle  (password for APEX_REST_PUBLIC_USER user)  
 
 `alter user APEX_PUBLIC_USER identified by oracle account unlock;`  
-### 9. Running the ORDS container to configure ORDS and install ords in the pluggable database
+### 10. Running the ORDS container to configure ORDS and install ords in the pluggable database
 `docker run -it --rm \`  
 `--name ords_node1 \`  
 `--network oracle_network  \`  
@@ -104,7 +104,7 @@ This guide provides a comprehensive, step-by-step process for setting up Oracle 
 > - oracle  (password for sys user)
 > - A  (accept the configurations) 
 
-### 10. Configure APEX Images Path
+### 11. Configure APEX Images Path
 `docker run -it --rm \`  
 `--name ords_node1 \`  
 `--network oracle_network  \`  
@@ -114,7 +114,7 @@ This guide provides a comprehensive, step-by-step process for setting up Oracle 
 `container-registry.oracle.com/database/ords:24.4.0   \`  
 `--config /etc/ords/config \`  
 `config set standalone.static.path /opt/oracle/apex/images`  
-### 11. Start ORDS Container
+### 12. Start ORDS Container
 `docker run -it \`  
 `--name ords_node1 \`  
 `--network oracle_network  \`  
@@ -124,7 +124,7 @@ This guide provides a comprehensive, step-by-step process for setting up Oracle 
 `container-registry.oracle.com/database/ords:24.4.0   \`  
 `--config /etc/ords/config \`  
 `serve`  
-### 12. Access APEX
+### 13. Access APEX
 #### 🌐 Access URL: `http://localhost:8080/ords`  
 Workspace: internal  
 Username: ADMIN  
