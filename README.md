@@ -115,14 +115,14 @@ This guide provides a comprehensive, step-by-step process for setting up Oracle 
 `--config /etc/ords/config \`  
 `config set standalone.static.path /opt/oracle/apex/images`  
 ### 11. Start ORDS Container
-`docker run -it  \`  
-`--name ords_node1  \ `  
+`docker run -it \`  
+`--name ords_node1 \`  
 `--network oracle_network  \`  
 `-p 8080:8080   \`  
-`-v $(pwd)/ords_config:/etc/ords/config:ro   \`  
-`-v $(pwd)/apex/images/:/opt/oracle/apex/images:ro   \`  
-`container-registry.oracle.com/database/ords:24.4.0  \`  
-`--config /etc/ords/config  \`  
+`-v $(pwd)/ords_config:/etc/ords/config   \`  
+`-v $(pwd)/apex/images/:/opt/oracle/apex/images   \`  
+`container-registry.oracle.com/database/ords:24.4.0   \`  
+`--config /etc/ords/config \`  
 `serve`  
 ### 12. Access APEX
 #### 🌐 Access URL: `http://localhost:8080/ords`  
