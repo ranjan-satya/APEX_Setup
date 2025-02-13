@@ -246,7 +246,7 @@ Password: Oradoc_db1 (password set during APEX configuration)
 
   
 ## 🎥 Video Tutorial
-Link to YouTube Tutorial
+[Link to YouTube Tutorial](https://youtu.be/c5t_Fbhbzbc)
 ## 📌 Notes
 - Ensure Docker is running before starting
 - Keep your Oracle Container Registry credentials secure
