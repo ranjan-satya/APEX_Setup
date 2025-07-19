@@ -39,7 +39,7 @@ This guide provides a comprehensive, step-by-step process for setting up Oracle 
 `mkdir oracle ords_config`
 ### 4. Set Permissions for apex and ords_config directories
 `chmod -R 775 apex`  
-`chmod -R 775 ords_config`
+`chmod -R 777 ords_config`
 ### 5. Login to Oracle Container Registry (Assumption: Oracle Container Registry account is created and auth token is created)
 `docker login container-registry.oracle.com`
   
@@ -215,7 +215,7 @@ Password: Oradoc_db1 (password set during APEX configuration)
 `--config /etc/ords/config \`  
 `config set standalone.static.path /opt/oracle/apex/images`  
 ### 12. Start ORDS Container
-`docker run -it \`  
+`docker run -d \`  
 `--name ords_node1 \`  
 `--network oracle_network  \`  
 `-p 8080:8080   \`  
