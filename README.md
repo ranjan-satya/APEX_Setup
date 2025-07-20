@@ -90,6 +90,10 @@ This guide provides a comprehensive, step-by-step process for setting up Oracle 
 > - oracle  (password for APEX_REST_PUBLIC_USER user)  
 
 `alter user APEX_PUBLIC_USER identified by oracle account unlock;`  
+#### 9.6 Exit out of the SQL plus and bash environment  
+ Exit out of SQL plus  `exit`  
+ Exit out of container bash  `exit`  
+  
 ### 10. Running the ORDS container to configure ORDS and install ords in the pluggable database
 `docker run -it --rm \`  
 `--name ords_node1 \`  
@@ -119,7 +123,7 @@ This guide provides a comprehensive, step-by-step process for setting up Oracle 
 `--config /etc/ords/config \`  
 `config set standalone.static.path /opt/oracle/apex/images`  
 ### 12. Start ORDS Container
-`docker run -it \`  
+`docker run -d \`  
 `--name ords_node1 \`  
 `--network oracle_network  \`  
 `-p 8080:8080   \`  
